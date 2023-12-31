@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/profile.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <title>Dinesh Murugan FAQ accordion</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+<div class="header">
+  <img src="assets/images/background-pattern-desktop.jpg" alt="head-img">
+</div>
+<div class="container" id="container">
+  <div class="star">
+    <img src="assets/images/icon-star.svg" alt="">
+    <h1>FAQs</h1>
+  </div>
+
+  
+  <div class="question">
+  <p class="p1">How do you balance EEE studies and web development?</p> 
+  <img src="assets/images/icon-plus.jpg" alt=""  onclick="toggleContent('content1')">
+</div>
+  <div id="content1" class="content" style="display: none;">
+    <p>Balancing studies with my passion for web development involves effective time management and dedication. 
+      I allocate specific time slots for coursework while dedicating free hours to coding, 
+    contributing to open-source projects, and enhancing my web development skills. </p></div>
+  <div class="line"></div>
+ 
+  <div class="question"><p class="p2"> What ignited your coding interest as an EEE student? </p>
+    <img src="assets/images/icon-plus.jpg" alt="" class="plusimg"  onclick="toggleContent('content2')"></div>
+     <div id="content2" class="content" style="display: none;"> <p>While pursuing EEE, I discovered the fascinating world
+       of web development. I was drawn to the limitless creativity and problem-solving aspects it offers. Integrating my EEE knowledge with web development allows me to 
+      create innovative solutions and explore the intersection of technology fields.</p></div>
+  <div class="line"></div>
+  <div class="question"><p class="p3">How do you contribute to open-source projects while studying?</p>
+    <img src="assets/images/icon-plus.jpg" alt=""  onclick="toggleContent('content3')">
+  </div>
+     <div id="content3" class="content" style="display: none;" > <p>Collaborating on open-source projects is a testament
+       to my commitment to continuous learning. I engage in projects aligned with my interests during spare hours, leveraging teamwork and community support. 
+      It's an avenue to apply my knowledge practically and contribute to the larger tech community.</p> </div>
+  <div class="line"></div>
+  <div class="question"><p class="p4">What's your aim in merging front-end and back-end skills?</p>
+    <img src="assets/images/icon-plus.jpg" alt="" onclick="toggleContent('content4')">
+  
+   <div id="content4" class="content" style="display: none;"><p> My aim is to bridge the gap between front-end and back-end
+     technologies, creating seamless, user-centric digital experiences. Integrating my EEE background
+     with web development enables me to innovate and develop tech solutions that blend functionality with user-friendly interfaces.</p></div>
+
+</div>
+<script>
+  if (window.matchMedia("(max-width: 768px)").matches) {
+  // Load mobile-specific script if the screen width is <= 768px
+  const script = document.createElement('script');
+  script.src = 'script-mobile.js';
+  document.body.appendChild(script);
+} else {
+  // Load desktop-specific script otherwise
+  const script = document.createElement('script');
+  script.src = 'script-desktop.js';
+  document.body.appendChild(script);
+}
+</script>
+
+</body>
+</html>
